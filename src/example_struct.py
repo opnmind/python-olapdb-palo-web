@@ -5,266 +5,268 @@ class IPaloWebAPIInterface:
 
     @classmethod
     def version(self): return "1.0"
+	
     @abstractmethod
     def connect(self): raise NotImplementedError
-	  @abstractmethod
+		
+	@abstractmethod
     def disconnect(self): raise NotImplementedError
 
 class IPaloWebAPIInterfaceServer:
     __metaclass__ = ABCMeta
 
-	  @abstractmethod
+	@abstractmethod
     def activate_license(self): raise NotImplementedError
 	
-	  @abstractmethod
+	@abstractmethod
     def change_password(self): raise NotImplementedError
 	
-	  @abstractmethod
+	@abstractmethod
     def databases(self): raise NotImplementedError
 	
-	  @abstractmethod
+	@abstractmethod
     def info(self): raise NotImplementedError
 	
-	  @abstractmethod
+	@abstractmethod
     def licenses(self): raise NotImplementedError
 	
-	  @abstractmethod
+	@abstractmethod
     def load(self): raise NotImplementedError
 	
-	  @abstractmethod
+	@abstractmethod
     def login(self): raise NotImplementedError
 	
-	  @abstractmethod
+	@abstractmethod
     def logout(self): raise NotImplementedError
 	
-	  @abstractmethod
+	@abstractmethod
     def save(self): raise NotImplementedError
 	
-	  @abstractmethod
+	@abstractmethod
     def shutdown(self): raise NotImplementedError
 	
-	  @abstractmethod
+	@abstractmethod
     def user_info(self): raise NotImplementedError
 		
 	
 class IPaloWebAPIInterfaceDatabase:
     __metaclass__ = ABCMeta
 	
-	  @abstractmethod
+	@abstractmethod
     def create(self): raise NotImplementedError
 	
-	  @abstractmethod
+	@abstractmethod
     def cubes(self): raise NotImplementedError
 	
-	  @abstractmethod
-    def destroy(self): raise NotImplementedError
+	@abstractmethod
+	def destroy(self): raise NotImplementedError
 	
-	  @abstractmethod
+	@abstractmethod
     def dimensions(self): raise NotImplementedError
 	
-	  @abstractmethod
+	@abstractmethod
     def info(self): raise NotImplementedError
 	
-	  @abstractmethod
+	@abstractmethod
     def load(self): raise NotImplementedError
 	
-	  @abstractmethod
+	@abstractmethod
     def rename(self): raise NotImplementedError
 	
-	  @abstractmethod
+	@abstractmethod
     def save(self): raise NotImplementedError
 	
-	  @abstractmethod
+	@abstractmethod
     def unload(self): raise NotImplementedError
 	
 	
 class IPaloWebAPIInterfaceDimension:
     __metaclass__ = ABCMeta
 	
-	  @abstractmethod
+	@abstractmethod
     def clear(self): raise NotImplementedError
 	
-	  @abstractmethod
+	@abstractmethod
     def create(self): raise NotImplementedError
 	
-	  @abstractmethod
+	@abstractmethod
     def cubes(self): raise NotImplementedError
 	
-	  @abstractmethod
+	@abstractmethod
     def destroy(self): raise NotImplementedError
 	
-	  @abstractmethod
+	@abstractmethod
     def dfilter(self): raise NotImplementedError
 	
-	  @abstractmethod
+	@abstractmethod
     def element(self): raise NotImplementedError
 	
-	  @abstractmethod
+	@abstractmethod
     def elements(self): raise NotImplementedError
 	
-	  @abstractmethod
+	@abstractmethod
     def info(self): raise NotImplementedError
 	
-	  @abstractmethod
+	@abstractmethod
     def rename(self): raise NotImplementedError			
 	
 
 class IPaloWebAPIInterfaceElement:
     __metaclass__ = ABCMeta
 	
-	  @abstractmethod
+	@abstractmethod
     def append(self): raise NotImplementedError
 	
-	  @abstractmethod
+	@abstractmethod
     def create(self): raise NotImplementedError
 	
-	  @abstractmethod
+	@abstractmethod
     def create_bulk(self): raise NotImplementedError
 	
-	  @abstractmethod
+	@abstractmethod
     def destroy(self): raise NotImplementedError
 	
-	  @abstractmethod
+	@abstractmethod
     def destroy_bulk(self): raise NotImplementedError
 	
-	  @abstractmethod
+	@abstractmethod
     def info(self): raise NotImplementedError
 	
-	  @abstractmethod
+	@abstractmethod
     def move(self): raise NotImplementedError
 	
-	  @abstractmethod
+	@abstractmethod
     def move_bulk(self): raise NotImplementedError
 	
-	  @abstractmethod
+	@abstractmethod
     def rename(self): raise NotImplementedError
 	
-	  @abstractmethod
+	@abstractmethod
     def replace(self): raise NotImplementedError
 	
-	  @abstractmethod
+	@abstractmethod
     def replace_bulk(self): raise NotImplementedError
 	
 
 class IPaloWebAPIInterfaceCube:
     __metaclass__ = ABCMeta
 
-	  @abstractmethod
+	@abstractmethod
     def clear(self): raise NotImplementedError
 	
-	  @abstractmethod
+	@abstractmethod
     def clear_cache(self): raise NotImplementedError
 	
-	  @abstractmethod
+	@abstractmethod
     def commit(self): raise NotImplementedError
 	
-	  @abstractmethod
+	@abstractmethod
     def convert(self): raise NotImplementedError
 	
-	  @abstractmethod
+	@abstractmethod
     def create(self): raise NotImplementedError
 	
-	  @abstractmethod
+	@abstractmethod
     def destroy(self): raise NotImplementedError
 	
-	  @abstractmethod
+	@abstractmethod
     def info(self): raise NotImplementedError
 	
-	  @abstractmethod
+	@abstractmethod
     def load(self): raise NotImplementedError
 	
-	  @abstractmethod
+	@abstractmethod
     def lock(self): raise NotImplementedError
 	
-	  @abstractmethod
+	@abstractmethod
     def locks(self): raise NotImplementedError
 	
-	  @abstractmethod
+	@abstractmethod
     def rename(self): raise NotImplementedError
 	
-	  @abstractmethod
+	@abstractmethod
     def rollback(self): raise NotImplementedError
 	
-	  @abstractmethod
+	@abstractmethod
     def rules(self): raise NotImplementedError
 	
-	  @abstractmethod
+	@abstractmethod
     def save(self): raise NotImplementedError
 	
-	  @abstractmethod
+	@abstractmethod
     def unload(self): raise NotImplementedError
 	
 	
 class IPaloWebAPIInterfaceCell:
     __metaclass__ = ABCMeta
 
-	  @abstractmethod
+	@abstractmethod
     def area(self): raise NotImplementedError
 	
-	  @abstractmethod
+	@abstractmethod
     def copy(self): raise NotImplementedError
 	
-	  @abstractmethod
+	@abstractmethod
     def drillthrough(self): raise NotImplementedError
 	
-	  @abstractmethod
+	@abstractmethod
     def export(self): raise NotImplementedError
 	
-	  @abstractmethod
+	@abstractmethod
     def goalseek(self): raise NotImplementedError
 	
-	  @abstractmethod
+	@abstractmethod
     def replace(self): raise NotImplementedError
 	
-	  @abstractmethod
+	@abstractmethod
     def replace_bulk(self): raise NotImplementedError
 	
-	  @abstractmethod
+	@abstractmethod
     def value(self): raise NotImplementedError
 	
-	  @abstractmethod
+	@abstractmethod
     def values(self): raise NotImplementedError
 	
 	
 class IPaloWebAPIInterfaceEvents:
     __metaclass__ = ABCMeta
 	
-	  @abstractmethod
+	@abstractmethod
     def begin(self): raise NotImplementedError
 	
-	  @abstractmethod
+	@abstractmethod
     def end(self): raise NotImplementedError
 		
 
 class IPaloWebAPIInterfaceRules:
     __metaclass__ = ABCMeta
 	
-	  @abstractmethod
+	@abstractmethod
     def create(self): raise NotImplementedError
 	
-	  @abstractmethod
+	@abstractmethod
     def destroy(self): raise NotImplementedError
 	
-	  @abstractmethod
+	@abstractmethod
     def functions(self): raise NotImplementedError
 	
-	  @abstractmethod
+	@abstractmethod
     def info(self): raise NotImplementedError
 	
-	  @abstractmethod
+	@abstractmethod
     def modify(self): raise NotImplementedError
 	
-	  @abstractmethod
+	@abstractmethod
     def parse(self): raise NotImplementedError
 		
 
 class IPaloWebAPIInterfaceSupervisionServer:
     __metaclass__ = ABCMeta
 	
-	  @abstractmethod
+	@abstractmethod
     def info(self): raise NotImplementedError
 	
-	  @abstractmethod
+	@abstractmethod
     def restart(self): raise NotImplementedError
 	
 	
@@ -405,10 +407,10 @@ class PaloWebAPI(IPaloWabAPIInterface):
     def connect(self):
         print 'Hello, World 1!'
 		
-	  def disconnect(self):
+	def disconnect(self):
         print 'Hello, World 2!'
 		
-	  def version(self):
+	def version(self):
         print 'Palo Server 5.1'
 		
 # Beispiel
