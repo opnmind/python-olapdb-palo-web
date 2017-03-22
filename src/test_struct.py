@@ -9,52 +9,51 @@ class PaloAPIServerTestSuper(unittest.TestCase):
 
 		
 class PaloAPIServerTest(PaloAPIServerTestSuper):
-	def runTest(self):
-		print("Running PaloAPIServerTest")
 		
 	@unittest.skip("not yet implemented ...")
-    def test_activate_license(self):
+    def runTestActivateLicense(self):
 		""" Test addition and fail. """
+		print("Running runTestActivateLicense")
         self.assertEqual(1, 1)
 	
 	@unittest.skip("not yet implemented ...")
-	def test_change_password(self):
+	def runTestChangePassword(self):
         self.assertEqual(1, 1)
 	
 	@unittest.skip("not yet implemented ...")
-	def test_databases(self):
+	def runTestDatabases(self):
         self.assertEqual(1, 1)
 	
 	@unittest.skip("not yet implemented ...")
-	def test_info(self):
+	def runTestInfo(self):
         self.assertEqual(1, 1)
 	
 	@unittest.skip("not yet implemented ...")
-	def test_licenses(self):
+	def runTestLicenses(self):
         self.assertEqual(1, 1)
 		
 	@unittest.skip("not yet implemented ...")
-	def test_load(self):
+	def runTestLoad(self):
         self.assertEqual(1, 1)
 	
 	@unittest.skip("not yet implemented ...")
-	def test_login(self):
+	def runTestLogin(self):
         self.assertEqual(1, 1)
 	
 	@unittest.skip("not yet implemented ...")
-	def test_logout(self):
+	def runTestLogout(self):
         self.assertEqual(1, 1)
 	
 	@unittest.skip("not yet implemented ...")
-	def test_save(self):
+	def runTestSave(self):
         self.assertEqual(1, 1)
 	
 	@unittest.skip("not yet implemented ...")
-	def test_shutdown(self):
+	def runTestShutdown(self):
         self.assertEqual(1, 1)
 		
 	@unittest.skip("not yet implemented ...")
-	def test_user_info(self):
+	def runTestUserInfo(self):
         self.assertEqual(1, 1)
 		
 	
@@ -65,9 +64,9 @@ def suite():
 	suite.addTest(PaloAPIServerTest())
 	
 	# Variante II
-	suite.addTest(PaloAPIServerTest('test_info'))
-    suite.addTest(PaloAPIServerTest('test_login'))
-    suite.addTest(PaloAPIServerTest('test_logout'))
+	suite.addTest(PaloAPIServerTest('runTestInfo'))
+    suite.addTest(PaloAPIServerTest('runTestLogin'))
+    suite.addTest(PaloAPIServerTest('runTestLogout'))
 	
     return suite
 	
