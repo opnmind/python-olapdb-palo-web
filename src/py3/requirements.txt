@@ -1,5 +1,5 @@
-requests==2.13.0
-urllib3==1.20
+requests
+urllib3
 # Kompatibilität py2 3
 future
 six
